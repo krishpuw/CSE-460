@@ -18,7 +18,7 @@ DELIMITER ','
 CSV HEADER;
 
 --liabilities
-COPY liabilities (liability_name, amount, due_data, department_id)
+COPY liabilities (liability_name, amount, due_date, department_id)
 FROM 'C:\\Users\\Public\\liabilities_clean.csv'
 DELIMITER ','
 CSV HEADER;
