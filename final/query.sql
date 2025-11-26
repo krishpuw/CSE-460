@@ -20,6 +20,14 @@ UPDATE departments
 SET manager_id = 4
 WHERE department_id = 3;
 
+UPDATE departments
+SET manager_id = 9
+WHERE department_id = 4;
+
+UPDATE departments
+SET manager_id = 100
+WHERE department_id = 1;
+
 --Deletion
 Delete from users
 where user_id = 1003;
