@@ -1,10 +1,10 @@
-CREATE TABLE IF NOT EXISTS public.Departments (
+CREATE TABLE IF NOT EXISTS Departments (
     department_id SERIAL PRIMARY KEY,
     department_name TEXT NOT NULL,
     manager_id INT 
 );
 
-CREATE TABLE IF NOT EXISTS public.Users (
+CREATE TABLE IF NOT EXISTS Users (
     user_id SERIAL PRIMARY KEY,
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS public.Users (
     role TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS public.Assets (
+CREATE TABLE IF NOT EXISTS Assets (
     asset_id SERIAL PRIMARY KEY,
     asset_name TEXT NOT NULL,
     asset_type TEXT NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS public.Assets (
     department_id INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS public.Liabilities (
+CREATE TABLE IF NOT EXISTS Liabilities (
     liability_id SERIAL PRIMARY KEY,
     liability_name TEXT NOT NULL,
     amount NUMERIC(15,2) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS public.Liabilities (
     department_id INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS public.Expenses (
+CREATE TABLE IF NOT EXISTS Expenses (
     expense_id SERIAL PRIMARY KEY,
     expense_name TEXT NOT NULL,
     amount NUMERIC(15,2) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS public.Expenses (
     user_id INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS public.Transactions (
+CREATE TABLE IF NOT EXISTS Transactions (
     transaction_id SERIAL PRIMARY KEY,
     transaction_type TEXT NOT NULL,
     amount NUMERIC(15,2) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS public.Transactions (
     user_id INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS public.Bookkeeping (
+CREATE TABLE IF NOT EXISTS Bookkeeping (
     entry_id SERIAL PRIMARY KEY,
     transaction_id INT NOT NULL,
     account_name TEXT NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS public.Bookkeeping (
     notes TEXT
 );
 
-CREATE TABLE IF NOT EXISTS public.Audit_Logs (
+CREATE TABLE IF NOT EXISTS Audit_Logs (
     log_id SERIAL PRIMARY KEY,
     user_id INT NOT NULL,
     action_type TEXT NOT NULL,
